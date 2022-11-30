@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -38,7 +39,8 @@ public class client_registration_form {
 
                     // displaying an image
                     displayingImageField.setBounds(3,20, 200, 200);
-                    displayingImageField.setIcon(new ImageIcon(jfc.getSelectedFile().getAbsolutePath()));
+                    ImageIcon gambarUkuranBaru = new ImageIcon(new ImageIcon(jfc.getSelectedFile().getAbsolutePath()).getImage().getScaledInstance(120,100, Image.SCALE_SMOOTH));
+                    displayingImageField.setIcon(gambarUkuranBaru);
                     displayingImageField.setText("");
 
                     // saving an image
